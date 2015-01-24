@@ -1,0 +1,39 @@
+{% extends "page.html" %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block stylesheet %}
+{{super()}}
+{% endblock %}
+
+{% block params %}
+
+data-base-url='{{base_url}}'
+data-ipynb-files = '{{ipynb_files}}'
+data-mod-time = '{{mod_time}}'
+data-html-preview = '{{html_preview}}'
+
+{% endblock %}
+
+{% block headercontainer %}
+
+<center><h2>List of Notebooks</h2></center>
+
+{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block site %}
+
+<div id="listing-container" class="container"></div>
+
+{% endblock %}
+
+{% block script %}
+
+    {{super()}}
+
+<script src="{{ "/nbextensions/preview/main.js" }}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
