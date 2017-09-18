@@ -1,0 +1,16 @@
+Type: Jupyter Notebook Extension
+Name: CodeMirror custom configuration
+Description: Allows changing CodeMirror configuration settings
+Main: main.js
+Compatibility: 4.x, 5.x
+Parameters:
+- name: codemirror_blinkrate
+  description: Blink rate of cursor in ms.
+  input_type: number
+  min: 100
+  default: 530
+- name: codemirror_autoclosebrackets
+  description: Automatically add closing brackets
+  input_type: checkbox
+  default: true
+
